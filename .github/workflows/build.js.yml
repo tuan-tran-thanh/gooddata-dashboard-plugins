@@ -22,6 +22,8 @@ jobs:
           node-version: 16.14.x
           cache: 'npm'
       - name: Install
-        working-directory: dashboard_description_plugin
-        run: yarn install --frozen-lockfile
+        working-directory: ./dashboard_description_plugin
+        run: |
+          ls -l
+          yarn install --frozen-lockfile
 
