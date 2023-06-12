@@ -23,5 +23,5 @@ jobs:
           cache: 'npm'
       - name: Install
         working-directory: dashboard_description_plugin
-        run: npm install
+        run: yarn install --frozen-lockfile
 
