@@ -32,6 +32,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: package-db-plugin-production-build
-          working-directory: dashboard_description_plugin
           path: dashboard-plugin.tar.gz
 
