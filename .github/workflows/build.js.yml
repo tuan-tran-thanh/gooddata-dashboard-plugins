@@ -11,7 +11,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,5 +23,9 @@ jobs:
           cache-dependency-path: dashboard_description_plugin/yarn.lock
       - name: Install
         working-directory: dashboard_description_plugin
-        run: yarn install --frozen-lockfile
+        run: |
+          yarn install --frozen-lockfile
+          yarn clean
+          yarn build-plugin
+          tar czvf dashboards.tar.gz -C dist .
 
