@@ -29,9 +29,9 @@ jobs:
           yarn build-plugin
           tar czvf dashboard-plugin.tar.gz -C dist .
       - name: Archive production artifacts
-        working-directory: dashboard_description_plugin
         uses: actions/upload-artifact@v3
+        working-directory: dashboard_description_plugin
         with:
-          name: package db plugin production build
+          name: package-db-plugin-production-build
           path: dist/dashboard-plugin.tar.gz
 
