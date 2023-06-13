@@ -27,5 +27,11 @@ jobs:
           yarn install --frozen-lockfile
           yarn clean
           yarn build-plugin
-          tar czvf dashboards.tar.gz -C dist .
+          tar czvf dashboard-plugin.tar.gz -C dist .
+      - name: Archive production artifacts
+        working-directory: dashboard_description_plugin
+        uses: actions/upload-artifact@v3
+        with:
+          name: package db plugin production build
+            path: dist/dashboard-plugin.tar.gz
 
