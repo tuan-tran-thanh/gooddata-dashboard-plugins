@@ -33,5 +33,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: package db plugin production build
-            path: dist/dashboard-plugin.tar.gz
+          path: dist/dashboard-plugin.tar.gz
 
